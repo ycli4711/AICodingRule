@@ -2,31 +2,11 @@
 
 `AGENTS.md` 保存通用规则；`skills/controlled-development/` 保存可审查的业务开发流程、方案模板、SQL 检查和冻结用户示例。
 
-## 两台电脑使用同一版本
+## 当前阶段：试用 skill
 
-每台电脑先将本仓库克隆到自己长期保存的位置。需要 GitHub 仓库访问权限。
+在已能发现该 skill 的 Codex 中，用 `$controlled-development` 发起一个实际小功能或 Bug 任务，并确认已加载。也可以明确要求读取本仓库中的 `skills/controlled-development/SKILL.md` 后按其流程工作；该路径相对于仓库根目录，其他工作目录需提供实际完整路径。
 
-```powershell
-git clone git@github.com:ycli4711/personal_information.git
-cd personal_information
-./install-skill.ps1
-```
-
-安装脚本默认使用 `CODEX_HOME`，未设置时使用用户目录中的 `.codex`。可传 `-CodexDirectory` 指定目录，或用 `-WhatIf` 预览。它只安装 `controlled-development`，不覆盖本机 AGENTS.md、凭证或其他 skill；已有版本变化时先备份到 `skill-backups`。保留目标目录中的额外文件，不执行删除。
-
-开发任务前同步：
-
-```powershell
-git status --short
-git pull --ff-only
-./install-skill.ps1
-```
-
-若有本地改动或拉取失败，先处理差异，不执行强制重置。只在拉取成功后安装。修改应在仓库源文件中进行；更新安装版前先将本机直接修改的内容合并回仓库。提交并推送后，另一台才可拉取；脚本不自动提交、推送、拉取，也不是保存即实时同步。
-
-仓库 AGENTS.md 如需作为用户级规则，应先与本机版本比较再合并；安装脚本故意不覆盖它。AGENTS.md 中的相对引用以仓库根目录为准，独立复制时以已安装 skill 为入口。
-
-安装后在新任务中显式使用 `$controlled-development` 并确认已加载。文件安装成功不保证现有会话热加载，也不保证自动选择总能命中。
+Git 仓库用于保存版本和共享修改。拉取只更新仓库文件，不代表本机其他位置的 skill 副本或运行中的会话自动更新。当前先试用流程，不配置自动安装或实时同步。
 
 ## 第一版验收与迭代
 
