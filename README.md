@@ -1,6 +1,6 @@
 # 个人开发规范与 skill
 
-`AGENTS.md` 保存通用规则；`skills/controlled-development/` 保存可审查的业务开发流程、方案模板、SQL 检查和冻结用户示例。
+`AGENTS.md` 保存 Codex 用户级通用规则；`CLAUDE.md` 保存 Claude Code 用户级通用规则；`skills/controlled-development/` 保存可审查的业务开发流程、方案模板、SQL 检查和冻结用户示例。
 
 ## 当前阶段：试用 skill
 
