@@ -1,0 +1,4 @@
+interface:
+  display_name: "通用功能交付"
+  short_description: "从需求到交互与接口确认，协调跨项目多端开发、联调、验收与恢复"
+  default_prompt: "使用 $feature-delivery-workflow，根据我的需求核实项目、拆分功能并确认交互与接口方案，获准后逐功能开发、联调和多端验收。"
