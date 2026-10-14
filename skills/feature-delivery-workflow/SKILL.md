@@ -17,7 +17,7 @@ description: "Use when a user requests coordinated delivery of business features
 | --- | --- |
 | 首次进入或项目不明 | 核实目标、项目绑定与工具能力，读取 [协调规则](references/coordination.md) |
 | 定义需求、设计接口或制定计划 | 按阶段顺序读取 [需求、接口与实施计划](references/feature-design.md)，不提前合并确认 |
-| 开发、交接或恢复 | 按有效授权推进，读取 [协调规则](references/coordination.md) |
+| 开发、交接、阻塞或恢复 | 按有效授权推进，读取 [协调规则](references/coordination.md)；阻塞时核实解除步骤，不只留下“等待环境就绪” |
 | 首次记录或更新进度 | 按 [运行记录](references/run-records.md) 保留必要状态和证据 |
 | 联调、验收或交付 | 读取 [验收规则](references/acceptance.md)，按端给出实际结论 |
 
