@@ -70,6 +70,7 @@ description: "Use when a user requests coordinated delivery of business features
 - 各目标仓库分别加载并落实自身适用规范，主控与子代理均遵循 [协调规则](references/coordination.md) 的规范加载要求；交付前按 [验收规则](references/acceptance.md) 核查实际变更，编译和业务测试不能代替规范检查。
 - 独立子代理只在当前工具和授权允许时使用；不可用时串行执行。角色范围是任务约束，不是文件系统沙箱。
 - 各端按实际参与记录；工程检查、Mock、真实联调、功能和视觉分别报告。角色自报完成需主控核对。
+- 已确认开发环境中的验收测试数据自动准备和清理，已确认范围内的菜单直接落实；按 [测试数据与菜单规则](references/acceptance.md#开发环境测试数据与菜单) 保护原有业务数据并避免实际发布、审批，不重复申请已覆盖的操作。
 - 主会话停止后不承诺自动唤醒或永久后台运行；以有效记录和实际状态恢复。
 
 ## 与 Superpowers 配合
