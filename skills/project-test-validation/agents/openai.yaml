@@ -1,0 +1,4 @@
+interface:
+  display_name: "测试与验证"
+  short_description: "依据需求与项目测试规范验证实际行为，执行联调、缺陷复测并记录证据"
+  default_prompt: "使用 $project-test-validation，依据已确认需求和项目规范验证本次变更，记录实际结果、缺陷及复测证据。"

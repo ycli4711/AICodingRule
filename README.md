@@ -10,8 +10,9 @@
 | [requirements-architecture](skills/requirements-architecture/SKILL.md) | 需求与架构：业务规则、最小必要结构、接口、数据及页面接入设计 |
 | [project-implementation](skills/project-implementation/SKILL.md) | 开发：遵守目标仓库规范，实现授权范围并验证实际行为 |
 | [project-code-review](skills/project-code-review/SKILL.md) | 审核：只读检查实际差异、业务正确性、规范、可维护性与验证质量 |
+| [project-test-validation](skills/project-test-validation/SKILL.md) | 测试：按需求与项目规范验证实际行为、真实联调和视觉，记录缺陷及复测证据 |
 
-用 `$feature-delivery-workflow` 发起功能交付，主控按阶段读取对应角色 Skill。也可单独使用角色；角色引用主控目录中的公共规范、文档及验收规则，因此这四个目录应保持同级并一起同步到技能目录。角色分工不要求每次启动三个代理，简单任务可由主控执行对应角色规则。
+用 `$feature-delivery-workflow` 发起功能交付，主控按阶段读取对应角色 Skill。也可单独使用角色；角色引用主控目录中的公共规范、文档及验收规则，因此主控和四个角色目录应保持同级并一起同步到技能目录。角色分工不要求每次为各角色启动代理，简单任务可由主控执行对应角色规则。开发自测后，代码审核与测试验证具备独立条件时可以并行，缺陷修复后分别复核和复测，由主控核对最终交付。
 
 `skills/controlled-development/` 作为历史流程保留，仅在用户明确要求时使用，不作为新角色的依赖。
 
