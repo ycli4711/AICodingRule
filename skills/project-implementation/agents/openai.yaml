@@ -1,0 +1,4 @@
+interface:
+  display_name: "开发实现"
+  short_description: "遵守目标仓库语言与工程规范，在授权范围完成可维护的实现和必要验证"
+  default_prompt: "使用 $project-implementation，按已确认方案与目标仓库规范完成授权范围的开发，保留已有改动并核验实际行为。"
