@@ -21,4 +21,6 @@ description: "Use to analyze business requirements and design interfaces, data c
 
 ## 输出
 
+遵循 [精简记录与反馈](../feature-delivery-workflow/references/feature-design.md#精简记录与反馈)：开头突出变化、问题和待决策项；必要契约与数据定义保留一次，已确认内容引用，不另写重复背景或实施清单。
+
 返回关键变化、必要定义、设计取舍、影响文件、依赖与真正缺口，相关规范仅引用来源。工程事实自行核查，用户只决定实质取舍；本角色不擅写业务代码或宣称用户已批准。主控汇总执行安排和授权，不新增接口确认关卡。

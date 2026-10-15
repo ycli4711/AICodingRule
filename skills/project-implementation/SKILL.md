@@ -22,4 +22,6 @@ description: "Use to implement an authorized feature or fix in an existing repos
 
 ## 交接
 
+遵循 [精简记录与反馈](../feature-delivery-workflow/references/feature-design.md#精简记录与反馈)：只突出实际增量、问题和验证结论；文件用途及执行细节在必要位置维护一次，不复述方案或逐条记录命令过程。
+
 提交审核前自查实际差异（含新增文件）、项目规范和受影响行为，完成最小充分自测。返回变化、版本、验证证据、已知缺陷及联调条件，不另写重复报告。按证据修复问题并只复验相关影响；不以删除检查或放宽断言消除问题。主控负责跨端整合及最终交付。

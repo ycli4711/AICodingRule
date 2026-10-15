@@ -22,4 +22,6 @@ description: "Use to plan and execute risk-based tests, integration checks, func
 
 ## 输出
 
+遵循 [精简记录与反馈](../feature-delivery-workflow/references/feature-design.md#精简记录与反馈)：先写结果、缺陷和验证缺口，常规通过项合并概述，证据按需链接。复测更新原结论，不复制全部测试步骤和历史日志，不省略失败或未验证范围。
+
 返回覆盖范围、版本/环境、实际结果、缺陷复现与证据、复测和未验证项。推测根因与确定事实分开；测试预期有误也须依据业务规则修正，不能为通过而删除断言。业务缺陷交实现者，测试角色不自动取得业务修改职责。工程验证结果交主控收尾，不能伪称用户人工验收通过，也不自行增加人工确认门槛。

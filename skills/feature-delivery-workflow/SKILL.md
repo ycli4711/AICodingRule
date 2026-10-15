@@ -27,6 +27,8 @@ description: "Use when a user requests coordinated delivery of business features
 
 阶段切换是进度说明，不是额外审批。既有授权持续有效，不能只列遗留项结束；有具体阻塞按公共规则处理。
 
+所有过程文档及角色交接统一按 [精简记录与反馈](references/feature-design.md#精简记录与反馈) 输出：先呈现状态、变化、问题和待决策项，必要定义只维护一次。主控合并重复内容、更新失效状态，不把各角色报告拼接成流水账；简单任务不拆多份文档。
+
 ## 按需使用角色
 
 | 职责 | Skill | 结果 |

@@ -22,4 +22,6 @@ description: "Use to review actual code changes against business requirements, r
 
 ## 输出
 
+遵循 [精简记录与反馈](../feature-delivery-workflow/references/feature-design.md#精简记录与反馈)：问题与影响优先，正常项概述；不生成逐项通过的长检查表，不复述需求和文件清单。复核更新原问题状态，不叠加重复报告。
+
 每项问题给出准确位置、触发条件或规则来源、影响及最小修复方向，同根因合并。无问题时简述范围和剩余缺口；独立审核与自查如实标注。输出代码和规范结论，不代替真实行为/视觉或用户认可；主控核对证据，不再复制执行本角色检查。
