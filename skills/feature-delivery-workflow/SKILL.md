@@ -23,6 +23,8 @@ description: "Use when a user requests coordinated delivery of business features
 
 只读取当前阶段相关参考。没有原型可结合现有产品讨论交互，不要求用户先准备完整设计。
 
+开发时按 [执行效率](references/coordination.md#执行效率) 提前核查环境、及时交接契约并共享有效验证结果；收尾按 [收敛规则](references/acceptance.md#收敛规则) 判断完成条件。提速不减少必要审核、测试或项目强制检查。
+
 ## 按阶段调用角色 Skill
 
 主控负责范围、阶段确认、授权、依赖、并行调度和最终交付；专业判断由下列角色规则约束。进入相应阶段时读取对应 Skill，不只在任务里写角色名称，不一次加载全部角色。
