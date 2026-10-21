@@ -2,3 +2,6 @@ interface:
   display_name: "需求与架构设计"
   short_description: "依据各项目规范梳理业务需求，设计最小必要的接口、数据和页面接入方案"
   default_prompt: "使用 $requirements-architecture，核查当前需求和项目规范，设计最小必要方案并突出变化、问题与待决策项。"
+
+policy:
+  allow_implicit_invocation: false

@@ -1,9 +1,16 @@
 ---
 name: feature-delivery-workflow
-description: "Use when a user requests coordinated delivery of business features in existing projects, especially multiple features or service, Web, App and other clients across repositories, with interaction and API review, integration, acceptance or interrupted-work recovery. Supports sentence, document, screenshot and prototype inputs."
+description: "Explicit invocation only. Use when a user requests coordinated delivery of business features in existing projects, especially multiple features or service, Web, App and other clients across repositories, with interaction and API review, integration, acceptance or interrupted-work recovery. Supports sentence, document, screenshot and prototype inputs. Do not activate from ordinary development requests or indirect references; supporting roles may be used within an explicitly requested feature-delivery-workflow."
 ---
 
 # 通用功能交付
+
+## 启用边界
+
+- 仅在用户明确要求使用本技能时启用（`$技能名` 或明确点名要求使用均可）。普通的开发、修复、审核、测试请求，以及“可以，按方案实施”等实施确认，不构成技能启用指令；仅讨论或检查技能也不构成启用。
+- 用户明确启用 `feature-delivery-workflow` 后，可在该任务范围按需使用其四个配套角色，无需逐个再次点名。单独点名某个角色只启用该角色及其必要参考，不自动启动整套工作流或其他角色。
+- 未明确启用时，不通过其他技能、参考链接或历史调用间接套用本套规则。继续遵循用户指令与项目规范；不能仅依据本套规则创建或切换分支、创建 worktree、分派代理或安排提交合并。
+- 整套工作流的任务分支/worktree 及协调安排仅在用户明确启用 `feature-delivery-workflow` 时适用；单独启用角色不自动引入这些安排。技能启用不替代实施、提交、推送等操作所需的已有授权。
 
 主控负责把当前业务目标推进到可验证交付：范围、授权、依赖、角色分工与完成判断。具体架构和写法遵循各仓库规范。简单问答、文案或明确低风险小修复采用普通处理，不套完整流程。
 

@@ -1,9 +1,17 @@
 ---
 name: project-test-validation
-description: "Use to plan and execute risk-based tests, integration checks, functional and visual validation, and defect retesting for an authorized project change. Acts as the testing role for feature-delivery-workflow; follows the shared authorization rules without expanding task scope."
+description: "Explicit invocation only. Use to plan and execute risk-based tests, integration checks, functional and visual validation, and defect retesting for an authorized project change. Acts as the testing role for feature-delivery-workflow; follows the shared authorization rules without expanding task scope. Do not activate from ordinary development requests or indirect references; supporting roles may be used within an explicitly requested feature-delivery-workflow."
 ---
 
 # 测试与验证
+
+## 启用边界
+
+- 仅在用户明确要求使用本技能时启用（`$技能名` 或明确点名要求使用均可）。普通的开发、修复、审核、测试请求，以及“可以，按方案实施”等实施确认，不构成技能启用指令；仅讨论或检查技能也不构成启用。
+- 用户明确启用 `feature-delivery-workflow` 后，可在该任务范围按需使用其四个配套角色，无需逐个再次点名。单独点名某个角色只启用该角色及其必要参考，不自动启动整套工作流或其他角色。
+- 未明确启用时，不通过其他技能、参考链接或历史调用间接套用本套规则。继续遵循用户指令与项目规范；不能仅依据本套规则创建或切换分支、创建 worktree、分派代理或安排提交合并。
+- 整套工作流的任务分支/worktree 及协调安排仅在用户明确启用 `feature-delivery-workflow` 时适用；单独启用角色不自动引入这些安排。技能启用不替代实施、提交、推送等操作所需的已有授权。
+
 
 依据确认需求、契约和项目测试规范判断实际行为，补齐验证缺口并复测缺陷，不以用例数量衡量质量。
 

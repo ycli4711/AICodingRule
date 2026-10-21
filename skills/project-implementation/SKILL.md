@@ -1,9 +1,17 @@
 ---
 name: project-implementation
-description: "Use to implement an authorized feature or fix in an existing repository, following its own language and engineering rules. Acts as the implementation role for feature-delivery-workflow, including frontend or backend tasks."
+description: "Explicit invocation only. Use to implement an authorized feature or fix in an existing repository, following its own language and engineering rules. Acts as the implementation role for feature-delivery-workflow, including frontend or backend tasks. Do not activate from ordinary development requests or indirect references; supporting roles may be used within an explicitly requested feature-delivery-workflow."
 ---
 
 # 开发实现
+
+## 启用边界
+
+- 仅在用户明确要求使用本技能时启用（`$技能名` 或明确点名要求使用均可）。普通的开发、修复、审核、测试请求，以及“可以，按方案实施”等实施确认，不构成技能启用指令；仅讨论或检查技能也不构成启用。
+- 用户明确启用 `feature-delivery-workflow` 后，可在该任务范围按需使用其四个配套角色，无需逐个再次点名。单独点名某个角色只启用该角色及其必要参考，不自动启动整套工作流或其他角色。
+- 未明确启用时，不通过其他技能、参考链接或历史调用间接套用本套规则。继续遵循用户指令与项目规范；不能仅依据本套规则创建或切换分支、创建 worktree、分派代理或安排提交合并。
+- 整套工作流的任务分支/worktree 及协调安排仅在用户明确启用 `feature-delivery-workflow` 时适用；单独启用角色不自动引入这些安排。技能启用不替代实施、提交、推送等操作所需的已有授权。
+
 
 在有效授权内实现清楚、合规、可验证的代码，不机械翻译设计或以编译成功代替完成。
 

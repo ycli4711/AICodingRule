@@ -2,3 +2,6 @@ interface:
   display_name: "代码审核"
   short_description: "对照需求和仓库规范审核实际差异，检查正确性、可维护性与测试有效性"
   default_prompt: "使用 $project-code-review，只读核查本次实际变更，按业务、项目规范和可维护性给出有依据的问题与修复建议。"
+
+policy:
+  allow_implicit_invocation: false
