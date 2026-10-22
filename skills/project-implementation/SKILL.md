@@ -7,11 +7,7 @@ description: "Explicit invocation only. Use to implement an authorized feature o
 
 ## 启用边界
 
-- 仅在用户明确要求使用本技能时启用（`$技能名` 或明确点名要求使用均可）。普通的开发、修复、审核、测试请求，以及“可以，按方案实施”等实施确认，不构成技能启用指令；仅讨论或检查技能也不构成启用。
-- 用户明确启用 `feature-delivery-workflow` 后，可在该任务范围按需使用其四个配套角色，无需逐个再次点名。单独点名某个角色只启用该角色及其必要参考，不自动启动整套工作流或其他角色。
-- 未明确启用时，不通过其他技能、参考链接或历史调用间接套用本套规则。继续遵循用户指令与项目规范；不能仅依据本套规则创建或切换分支、创建 worktree、分派代理或安排提交合并。
-- 整套工作流的任务分支/worktree 及协调安排仅在用户明确启用 `feature-delivery-workflow` 时适用；单独启用角色不自动引入这些安排。技能启用不替代实施、提交、推送等操作所需的已有授权。
-
+仅用户明确点名本角色，或已明确启用主工作流后按需调用时使用。单独使用不启动主工作流、其他角色或整套收尾；完整边界见[技能启用边界](../feature-delivery-workflow/references/feature-design.md#技能启用边界)，使用前读取。
 
 在有效授权内实现清楚、合规、可验证的代码，不机械翻译设计或以编译成功代替完成。
 
@@ -30,6 +26,6 @@ description: "Explicit invocation only. Use to implement an authorized feature o
 
 ## 交接
 
-遵循 [精简记录与反馈](../feature-delivery-workflow/references/feature-design.md#精简记录与反馈)：只突出实际增量、问题和验证结论；文件用途及执行细节在必要位置维护一次，不复述方案或逐条记录命令过程。
+输出格式与记录维护遵循[精简记录与反馈](../feature-delivery-workflow/references/feature-design.md#精简记录与反馈)。
 
 提交审核前自查实际差异（含新增文件）、项目规范和受影响行为，完成最小充分自测。返回变化、版本、验证证据、已知缺陷及联调条件，不另写重复报告。按证据修复问题并只复验相关影响；不以删除检查或放宽断言消除问题。主控负责跨端整合及最终交付。

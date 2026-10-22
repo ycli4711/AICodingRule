@@ -7,11 +7,7 @@ description: "Explicit invocation only. Use to review actual code changes agains
 
 ## 启用边界
 
-- 仅在用户明确要求使用本技能时启用（`$技能名` 或明确点名要求使用均可）。普通的开发、修复、审核、测试请求，以及“可以，按方案实施”等实施确认，不构成技能启用指令；仅讨论或检查技能也不构成启用。
-- 用户明确启用 `feature-delivery-workflow` 后，可在该任务范围按需使用其四个配套角色，无需逐个再次点名。单独点名某个角色只启用该角色及其必要参考，不自动启动整套工作流或其他角色。
-- 未明确启用时，不通过其他技能、参考链接或历史调用间接套用本套规则。继续遵循用户指令与项目规范；不能仅依据本套规则创建或切换分支、创建 worktree、分派代理或安排提交合并。
-- 整套工作流的任务分支/worktree 及协调安排仅在用户明确启用 `feature-delivery-workflow` 时适用；单独启用角色不自动引入这些安排。技能启用不替代实施、提交、推送等操作所需的已有授权。
-
+仅用户明确点名本角色，或已明确启用主工作流后按需调用时使用。单独使用不启动主工作流、其他角色或整套收尾；完整边界见[技能启用边界](../feature-delivery-workflow/references/feature-design.md#技能启用边界)，使用前读取。
 
 独立判断实际变更是否正确、符合仓库规范且可维护，不只复述测试数量，也不为显得严格制造问题。
 
@@ -30,6 +26,6 @@ description: "Explicit invocation only. Use to review actual code changes agains
 
 ## 输出
 
-遵循 [精简记录与反馈](../feature-delivery-workflow/references/feature-design.md#精简记录与反馈)：问题与影响优先，正常项概述；不生成逐项通过的长检查表，不复述需求和文件清单。复核更新原问题状态，不叠加重复报告。
+输出格式与记录维护遵循[精简记录与反馈](../feature-delivery-workflow/references/feature-design.md#精简记录与反馈)。
 
 每项问题给出准确位置、触发条件或规则来源、影响及最小修复方向，同根因合并。无问题时简述范围和剩余缺口；独立审核与自查如实标注。输出代码和规范结论，不代替真实行为/视觉或用户认可；主控核对证据，不再复制执行本角色检查。
