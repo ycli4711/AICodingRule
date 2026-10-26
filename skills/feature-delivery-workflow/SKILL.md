@@ -31,6 +31,8 @@ description: "Explicit invocation only. Use when a user requests coordinated del
 
 阶段切换是进度说明，不是额外审批。既有授权持续有效，不能只列遗留项结束；有具体阻塞按公共规则处理。
 
+正式方案以 Markdown 为唯一维护源，同步生成自包含 HTML 阅读版，优先交付 HTML 链接并保留同版本 Markdown。生成方法、接口与 SQL 格式见 [HTML 阅读版](references/feature-design.md#html-阅读版与结构化技术内容)。仅变更展示方式不新增授权关口。
+
 过程文档及角色交接统一遵循[精简记录与反馈](references/feature-design.md#精简记录与反馈)；编写或修订方案时，执行该节的生成顺序与输出前检查。主控整合角色结果并维护同一记录，不拼接重复报告。
 
 ## 按需使用角色
