@@ -15,6 +15,8 @@ description: "Explicit invocation only. Use to implement an authorized feature o
 
 接收有效方案、目录、修改边界、已有改动及依赖。授权沿用 [统一规则](../feature-delivery-workflow/references/feature-design.md#唯一授权规则)，仓库规范、worktree、协作和阻塞按 [执行协作](../feature-delivery-workflow/references/coordination.md)，验证按 [验证与收尾](../feature-delivery-workflow/references/acceptance.md)。只读当前需要部分，不重开工作流。
 
+在主工作流内承担实现时，启动前必须核对 [方案文档交付与实施关口](../feature-delivery-workflow/references/feature-design.md#方案文档交付与实施关口) 的文档、版本、交付及确认依据。业务口径或开发范围选择、主控单句“已授权”不能替代这些证据；缺失时先向主控核实，仅继续只读核查，不写业务代码或先开发再补文档。单独使用本角色不因此启动整套工作流。
+
 ## 实现重点
 
 - 先对照仓库规范和现有调用链；设计与实际规则冲突时说明具体影响和最小调整，不擅自改变业务口径。
