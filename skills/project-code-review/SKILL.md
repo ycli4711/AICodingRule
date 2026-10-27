@@ -13,7 +13,9 @@ description: "Explicit invocation only. Use to review actual code changes agains
 
 ## 输入与公共规则
 
-接收方案、基线、当前差异（含未跟踪文件）、仓库规范和已有证据，核对改动归属。按 [执行协作](../feature-delivery-workflow/references/coordination.md#各仓库规范加载与落实) 自行读取适用规范；授权沿用 [统一规则](../feature-delivery-workflow/references/feature-design.md#唯一授权规则)，证据复用与复核按 [验证与收尾](../feature-delivery-workflow/references/acceptance.md)。默认只读，发现问题交实现者，不自动取得写操作职责。
+接收方案、基线、当前差异（含未跟踪文件）、仓库规范和已有证据，核对改动归属。读取 [适用仓库规范](../feature-delivery-workflow/references/coordination.md#各仓库规范加载与落实)、[证据有效性](../feature-delivery-workflow/references/acceptance.md#证据有效性与增量检查) 和 [缺陷与证据](../feature-delivery-workflow/references/acceptance.md#缺陷与证据)。默认只读，发现问题交实现者；只读审核无需加载 worktree 创建、SQL 执行或清理步骤，不自动取得写操作职责。
+
+首次使用须读取 [按需加载与前置关口](../feature-delivery-workflow/references/coordination.md#按需加载与前置关口)，按实际动作补齐条件规则；单独调用也适用。已读有效内容复用。
 
 ## 核查重点
 

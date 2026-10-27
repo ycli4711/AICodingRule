@@ -13,9 +13,11 @@ description: "Explicit invocation only. Use to implement an authorized feature o
 
 ## 输入与公共规则
 
-接收有效方案、目录、修改边界、已有改动及依赖。授权沿用 [统一规则](../feature-delivery-workflow/references/feature-design.md#唯一授权规则)，仓库规范、worktree、协作和阻塞按 [执行协作](../feature-delivery-workflow/references/coordination.md)，验证按 [验证与收尾](../feature-delivery-workflow/references/acceptance.md)。只读当前需要部分，不重开工作流。
+接收有效方案、目录、修改边界、已有改动及依赖。读取 [授权范围](../feature-delivery-workflow/references/feature-design.md#授权范围与延续)、[仓库规范](../feature-delivery-workflow/references/coordination.md#各仓库规范加载与落实)、[验证安排](../feature-delivery-workflow/references/acceptance.md#一份验证安排) 和 [证据有效性](../feature-delivery-workflow/references/acceptance.md#证据有效性与增量检查)。主工作流内建立环境时读 [分支规则](../feature-delivery-workflow/references/coordination.md#分支与运行环境)；涉及数据库或数据准备读 [数据库规则](../feature-delivery-workflow/references/database.md) 的对应节；启动服务前读 [服务细则](../feature-delivery-workflow/references/service-recovery.md)。
 
-在主工作流内承担实现时，启动前必须核对 [方案文档交付与实施关口](../feature-delivery-workflow/references/feature-design.md#方案文档交付与实施关口) 的文档、版本、交付及确认依据。业务口径或开发范围选择、主控单句“已授权”不能替代这些证据；缺失时先向主控核实，仅继续只读核查，不写业务代码或先开发再补文档。单独使用本角色不因此启动整套工作流。
+首次使用须读取 [按需加载与前置关口](../feature-delivery-workflow/references/coordination.md#按需加载与前置关口)，按实际动作补齐条件规则；单独调用也适用。已读有效内容复用。
+
+主工作流内实施前核对 [方案文档交付与实施关口](../feature-delivery-workflow/references/feature-design.md#方案文档交付与实施关口) 的原始交付及确认依据；缺失先向主控核实，只继续只读工作。单独使用本角色不启动整套流程。
 
 ## 实现重点
 

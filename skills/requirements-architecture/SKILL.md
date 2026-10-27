@@ -13,7 +13,9 @@ description: "Explicit invocation only. Use to analyze business requirements and
 
 ## 输入与公共规则
 
-接收目标、有效需求与确认、资料、仓库及当前缺口。方案与授权按 [公共规则](../feature-delivery-workflow/references/feature-design.md)；自行读取本次仓库适用规范，按 [规范加载](../feature-delivery-workflow/references/coordination.md#各仓库规范加载与落实) 执行。单独使用本角色也不递归启动主控。
+接收目标、有效需求与确认、资料、仓库及当前缺口。读取 [需求与统一方案](../feature-delivery-workflow/references/feature-design.md#需求与统一方案)、[仓库规范](../feature-delivery-workflow/references/coordination.md#各仓库规范加载与落实)。核实工程事实时读取 [只读核查](../feature-delivery-workflow/references/coordination.md#只读核查与任务关联性)。在主工作流内编写方案前须读取 [唯一授权规则](../feature-delivery-workflow/references/feature-design.md#唯一授权规则)，并与主控补齐分支、人工验收及远程保全安排。实际编写方案时读取 [方案编写](../feature-delivery-workflow/references/plan-writing.md)；向用户申请实施时读取 [唯一授权规则](../feature-delivery-workflow/references/feature-design.md#唯一授权规则)。单独使用不启动主控。
+
+首次使用须读取 [按需加载与前置关口](../feature-delivery-workflow/references/coordination.md#按需加载与前置关口)，按实际动作补齐条件规则；单独调用也适用。已读有效内容复用。
 
 ## 专业判断
 

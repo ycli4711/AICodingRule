@@ -13,12 +13,14 @@ description: "Explicit invocation only. Use to plan and execute risk-based tests
 
 ## 输入与公共规则
 
-接收范围、当前版本、环境、身份、有效授权及已有测试证据。按 [执行协作](../feature-delivery-workflow/references/coordination.md#各仓库规范加载与落实) 读取适用仓库规范；授权沿用 [统一规则](../feature-delivery-workflow/references/feature-design.md#唯一授权规则)。验证范围、开发测试数据、并行资源、缺陷闭环和完成条件统一遵循 [验证与收尾](../feature-delivery-workflow/references/acceptance.md)，不另设审批。
+接收范围、当前版本、环境、身份、有效授权及已有测试证据。读取 [仓库规范](../feature-delivery-workflow/references/coordination.md#各仓库规范加载与落实)、[授权范围](../feature-delivery-workflow/references/feature-design.md#授权范围与延续)、[验证安排](../feature-delivery-workflow/references/acceptance.md#一份验证安排)、[证据有效性](../feature-delivery-workflow/references/acceptance.md#证据有效性与增量检查) 和 [缺陷与证据](../feature-delivery-workflow/references/acceptance.md#缺陷与证据)。操作数据库或准备数据前读 [数据库规则](../feature-delivery-workflow/references/database.md) 对应节；页面验证读 [验收浏览器](../feature-delivery-workflow/references/coordination.md#验证与验收浏览器)，启动服务前读 [服务细则](../feature-delivery-workflow/references/service-recovery.md)。不加载无关收尾规则，不另设审批。
+
+首次使用须读取 [按需加载与前置关口](../feature-delivery-workflow/references/coordination.md#按需加载与前置关口)，按实际动作补齐条件规则；单独调用也适用。已读有效内容复用。
 
 ## 验证重点
 
 - 预期来自确认需求与契约，源码用于定位风险，不能把当前实现直接当正确答案。
-- 缺少验证数据时先按 [缺数据先查业务链路](../feature-delivery-workflow/references/acceptance.md#缺数据先查业务链路) 核查生产入口和前置流程；真实联调数据必须通过正常业务流程产生，不直接补造轮次、资格、审批、关联或提交事实。流程缺陷交实现者，未实现或条件不足的部分报告未验证；Mock/fixture 仅支持对应局部结论，历史修复不能替代正常链路验证。
+- 缺少验证数据时先按 [缺数据先查业务链路](../feature-delivery-workflow/references/database.md#缺数据先查业务链路) 核查生产入口和前置流程；真实联调数据必须通过正常业务流程产生，不直接补造轮次、资格、审批、关联或提交事实。流程缺陷交实现者，未实现或条件不足的部分报告未验证；Mock/fixture 仅支持对应局部结论，历史修复不能替代正常链路验证。
 - 先核对已有自测覆盖及版本，只补缺口；测试替身隔离外部边界，不能替换被测逻辑再声称通过。静态结果与真实依赖行为分开报告。
 - 选择与实际影响匹配的成功、失败、关键边界及必要/禁止副作用；独立逻辑分别覆盖，共用路径取代表。
 - 有视觉变化和参考时核对可比状态下的布局与交互；行为通过不等于视觉符合。
