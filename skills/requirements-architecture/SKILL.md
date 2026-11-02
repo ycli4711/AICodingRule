@@ -27,6 +27,6 @@ description: "Explicit invocation only. Use to analyze business requirements and
 
 ## 输出
 
-输出格式与记录维护遵循[精简记录与反馈](../feature-delivery-workflow/references/feature-design.md#精简记录与反馈)。
+输出格式与记录维护遵循[精简记录与反馈](../feature-delivery-workflow/references/feature-design.md#精简记录与反馈)，交接前读取 [阶段推进与确认后的动作](../feature-delivery-workflow/references/feature-design.md#阶段推进与确认后的动作)。明确方案是否已具备实施条件、当前有效授权、剩余具体阻塞及下一步；未就绪的需求稿不能包装成可实施定稿。正常任务合并交付设计与实施方案，不固定增加两轮确认；仅整理文档不重置阶段，已确认内容沿用，实质变化只提交增量。单独使用本角色只交接就绪结论，不自行启动开发。
 
 返回关键变化、必要定义、设计取舍、影响文件、依赖与真正缺口，相关规范仅引用来源。工程事实自行核查，用户只决定实质取舍；本角色不擅写业务代码或宣称用户已批准。主控汇总执行安排和授权，不新增接口确认关卡。
