@@ -13,7 +13,7 @@ description: "Explicit invocation only. Use to plan and execute risk-based tests
 
 ## 输入与公共规则
 
-接收范围、当前版本、环境、身份、有效授权及已有测试证据。读取 [仓库规范](../feature-delivery-workflow/references/coordination.md#各仓库规范加载与落实)、[授权范围](../feature-delivery-workflow/references/feature-design.md#授权范围与延续)、[验证安排](../feature-delivery-workflow/references/acceptance.md#一份验证安排)、[证据有效性](../feature-delivery-workflow/references/acceptance.md#证据有效性与增量检查) 和 [缺陷与证据](../feature-delivery-workflow/references/acceptance.md#缺陷与证据)。操作数据库或准备数据前读 [数据库规则](../feature-delivery-workflow/references/database.md) 对应节；页面验证读 [验收浏览器](../feature-delivery-workflow/references/coordination.md#验证与验收浏览器)，启动服务前读 [服务细则](../feature-delivery-workflow/references/service-recovery.md)。不加载无关收尾规则，不另设审批。
+接收范围、当前版本、环境、身份、有效授权及已有测试证据。读取 [仓库规范](../feature-delivery-workflow/references/coordination.md#各仓库规范加载与落实)、[授权范围](../feature-delivery-workflow/references/feature-design.md#授权范围与延续)、[验证安排](../feature-delivery-workflow/references/acceptance.md#一份验证安排)、[证据有效性](../feature-delivery-workflow/references/acceptance.md#证据有效性与增量检查) 和 [缺陷与证据](../feature-delivery-workflow/references/acceptance.md#缺陷与证据)。操作数据库或准备数据前读 [数据库规则](../feature-delivery-workflow/references/database.md) 对应节；页面验证须读取 [页面与子视图实际视觉验收](../feature-delivery-workflow/references/acceptance.md#页面与子视图实际视觉验收)，有原型或截图时同时读取 [原型偏离关口](../feature-delivery-workflow/references/feature-design.md#原型偏离关口)；浏览器操作读 [验收浏览器](../feature-delivery-workflow/references/coordination.md#验证与验收浏览器)，启动服务前读 [服务细则](../feature-delivery-workflow/references/service-recovery.md)。不加载无关收尾规则，不另设审批。
 
 首次使用须读取 [按需加载与前置关口](../feature-delivery-workflow/references/coordination.md#按需加载与前置关口)，按实际动作补齐条件规则；单独调用也适用。已读有效内容复用。
 
@@ -23,7 +23,7 @@ description: "Explicit invocation only. Use to plan and execute risk-based tests
 - 缺少验证数据时先按 [缺数据先查业务链路](../feature-delivery-workflow/references/database.md#缺数据先查业务链路) 核查生产入口和前置流程；真实联调数据必须通过正常业务流程产生，不直接补造轮次、资格、审批、关联或提交事实。流程缺陷交实现者，未实现或条件不足的部分报告未验证；Mock/fixture 仅支持对应局部结论，历史修复不能替代正常链路验证。
 - 先核对已有自测覆盖及版本，只补缺口；测试替身隔离外部边界，不能替换被测逻辑再声称通过。静态结果与真实依赖行为分开报告。
 - 选择与实际影响匹配的成功、失败、关键边界及必要/禁止副作用；独立逻辑分别覆盖，共用路径取代表。
-- 有视觉变化和参考时核对可比状态下的布局与交互；行为通过不等于视觉符合。
+- 按方案页面及关键子视图清单核对原型参考、实现截图、差异与结论；实际查看参考及渲染结果，在可比条件下检查布局与交互。可复用有效对照证据，只补缺口；未查看、未对照或证据不足的视图标为未验证，未批准偏离不得通过。行为测试、DOM 文本或截图已保存均不能替代视觉检查，不新增逐页用户审批。
 - 涉及展示数据时按 [展示数据核对](../feature-delivery-workflow/references/acceptance.md#展示数据核对) 补齐真实样本与字段核对证据；未解释的关键错值或缺失不能判为通过。
 - 核实命令实际执行了哪些用例，保留失败和跳过事实。缺陷复测回到原失败场景及受修复影响路径，不无依据重跑全部检查。
 
