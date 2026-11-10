@@ -7,11 +7,14 @@ import { createRequire } from 'node:module';
 import { createHash } from 'node:crypto';
 
 const args = process.argv.slice(2);
+const docLinksAt = args.indexOf('--doc-links');
+const docLinks = docLinksAt !== -1;
+if (docLinks) args.splice(docLinksAt, 1);
 const moduleAt = args.indexOf('--modules');
 const modules = moduleAt >= 0 ? args.splice(moduleAt, 2)[1] : process.env.WORKFLOW_NODE_MODULES;
 const [input, output] = args;
 if (!input || !output || args.length !== 2 || path.resolve(input) === path.resolve(output)) {
-  console.error('Usage: node render-plan.mjs source.md output.html [--modules /absolute/node_modules]');
+  console.error('Usage: node render-plan.mjs source.md output.html [--doc-links] [--modules /absolute/node_modules]');
   process.exit(1);
 }
 let marked;
@@ -53,6 +56,9 @@ const renderer = {
   },
   html({text}) { return escape(text); },
   link({href, title, tokens}) {
+    if (docLinks && !/^(?:[a-z][a-z0-9+.-]*:|[/?#])/i.test(href)) {
+      href = href.replace(/^([^?#]+)\.md(?=[?#]|$)/i, '$1.html');
+    }
     const safe = /^(https?:|mailto:|#)/i.test(href) || !/^[a-z][a-z0-9+.-]*:/i.test(href);
     const label = this.parser.parseInline(tokens);
     return safe ? `<a href="${escape(href)}"${title ? ` title="${escape(title)}"` : ''}>${label}</a>` : label;
