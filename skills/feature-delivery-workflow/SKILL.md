@@ -49,4 +49,4 @@ description: "Explicit invocation only. Use when a user requests coordinated del
 
 默认主控承担所需职责，有独立工作块或审核需要时才分派；复杂重要改动在条件允许时独立审核，不把自查称作独立审核。每个执行者只加载自己的角色及所需规则，不递归组织工作流。主控维护 [同一当前记录](references/feature-design.md#精简记录与反馈)，核对角色证据而不重做其工作。
 
-按需使用可用 Superpowers，不默认 TDD、不加载 controlled-development，不因技能调用扩大检查或增加审批。缺工具时说明实际限制并继续独立已授权工作。当前交付与原需求验收修复留在当前会话；独立新目标可建议另开，不自动创建或通知会话，不承诺结束后后台推进。
+按需使用可用 Superpowers，不默认 TDD、不加载 controlled-development，不因技能调用扩大检查或增加审批。缺工具时说明实际限制并继续独立已授权工作。当前交付与原需求验收修复留在当前会话；独立新目标可建议另开，不自动创建或通知会话，不承诺结束后后台推进。归档会话或新建会话不改变现有工作区。续接任务按 [工作区交接核验](references/handoff.md#工作区交接核验) 记录并核对路径、分支和 HEAD；对不上先暂停受影响的写入并说明，不自动切分支或更换 worktree。
